@@ -14,11 +14,23 @@ export const blogApi = {
     const response = await firebaseAxios.get<FirebasePostsResponse>('/posts.json');
     const data = response.data;
     if (!data) return [];
-    return data;
+
+    return Object.keys(data).map((key) => ({
+      id: key,
+      ...data[key],
+    }));
   },
 
   createPost: async (post: IPost): Promise<void> => {
     await firebaseAxios.post('/posts.json', post);
   },
+
+  getPostById: async (id: string): Promise<IPost | null> => {
+    const response = await firebaseAxios.get<IPost | null>(`/posts/${id}.json`);
+    return response.data;
+  },
+  deletePost: async (id: string): Promise<void> => {
+    await firebaseAxios.delete(`/posts/${id}.json`);
+  }
 
 };

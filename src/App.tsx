@@ -13,6 +13,7 @@ import { Layout } from "antd";
 import { AppRoutes } from "./shared/routing/routes.ts";
 import { Content } from "antd/es/layout/layout";
 import { blogApi } from "./shared/api/api.ts";
+import PostDetails from "./pages/PostDetails/PostDetails.tsx";
 
 const App = () => {
 
@@ -39,7 +40,10 @@ const App = () => {
           <Route path={AppRoutes.main} element={<Home />} />
           <Route path={AppRoutes.about} element={<About />} />
           <Route path={AppRoutes.contacts} element={<Contacts />} />
-          <Route path={AppRoutes.postForm} element={<AddPost />} />
+
+          <Route path={AppRoutes.addPost} element={<AddPost />} />
+
+          <Route path={AppRoutes.postDetails} element={<PostDetails />} />
         </Routes>
       </Content>
 

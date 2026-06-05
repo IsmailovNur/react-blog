@@ -1,0 +1,16 @@
+.post-details {
+  min-height: 70vh;
+}
+
+.details-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.popup {
+  border: 3px;
+}

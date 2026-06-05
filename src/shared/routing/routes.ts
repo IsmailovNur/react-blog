@@ -3,7 +3,6 @@ export const AppRoutes = {
   about: '/about',
   contacts: '/contacts',
   addPost: '/posts/add',
-  postForm: '/posts/form',
   postDetails: '/posts/:id',
 } as const;
 

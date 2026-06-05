@@ -1,0 +1,13 @@
+.post-date {
+  opacity: .7;
+  font-size: 13px;
+}
+
+.post-card-title {
+  font-size: 24px;
+  color: #fff;
+}
+
+.date-icon {
+  margin-right: 6px;
+}
