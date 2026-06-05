@@ -5,6 +5,7 @@ import {
   ArrowLeftOutlined,
   CalendarOutlined,
   DeleteOutlined,
+  EditOutlined
 } from '@ant-design/icons';
 import type { IPost } from '../../shared/types/blog';
 import { blogApi } from "../../shared/api/api.ts";
@@ -12,11 +13,11 @@ import { AppRoutes } from "../../shared/routing/routes.ts";
 
 import Loader from "../../shared/Loader/Loader.tsx";
 
-import "./PostDetails.css";
+import "./PostDetailsPage.css";
 
 const {Title, Paragraph} = Typography;
 
-const PostDetails = () => {
+const PostDetailsPage = () => {
   const {id} = useParams<{ id: string }>();
 
   const navigate = useNavigate();
@@ -81,6 +82,13 @@ const PostDetails = () => {
           </div>
 
           <Space>
+            <Button
+              icon={<EditOutlined />}
+              onClick={() => navigate(`/posts/${id}/edit`)}
+              type="primary"
+            >
+              Edit
+            </Button>
             <Popconfirm
               title="Delete the post"
               description="Are you sure you want to delete this post?"
@@ -103,4 +111,4 @@ const PostDetails = () => {
   );
 };
 
-export default PostDetails;
+export default PostDetailsPage;

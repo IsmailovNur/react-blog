@@ -2,10 +2,10 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 
-import Home from "./pages/Home/Home.tsx";
-import About from "./pages/About/About.tsx";
-import AddPost from "./pages/AddPost/AddPost.tsx";
-import Contacts from "./pages/Contacts/Contacts.tsx";
+import HomePage from "./pages/Home/HomePage.tsx";
+import AboutPage from "./pages/About/AboutPage.tsx";
+import AddPost from "./pages/AddPost/AddPostPage.tsx";
+import ContactsPage from "./pages/Contacts/ContactsPage.tsx";
 import AppHeader from "./widgets/AppHeader/AppHeader.tsx";
 import AppFooter from "./widgets/AppFooter/AppFooter.tsx";
 
@@ -13,7 +13,8 @@ import { Layout } from "antd";
 import { AppRoutes } from "./shared/routing/routes.ts";
 import { Content } from "antd/es/layout/layout";
 import { blogApi } from "./shared/api/api.ts";
-import PostDetails from "./pages/PostDetails/PostDetails.tsx";
+import PostDetailsPage from "./pages/PostDetails/PostDetailsPage.tsx";
+import EditPost from "./pages/EditPost/EditPostPage.tsx";
 
 const App = () => {
 
@@ -37,13 +38,15 @@ const App = () => {
 
       <Content className="layout-content">
         <Routes>
-          <Route path={AppRoutes.main} element={<Home />} />
-          <Route path={AppRoutes.about} element={<About />} />
-          <Route path={AppRoutes.contacts} element={<Contacts />} />
+          <Route path={AppRoutes.main} element={<HomePage />} />
+          <Route path={AppRoutes.about} element={<AboutPage />} />
+          <Route path={AppRoutes.contacts} element={<ContactsPage />} />
 
           <Route path={AppRoutes.addPost} element={<AddPost />} />
 
-          <Route path={AppRoutes.postDetails} element={<PostDetails />} />
+          <Route path={AppRoutes.postDetails} element={<PostDetailsPage />} />
+
+          <Route path={AppRoutes.editPost} element={<EditPost />} />
         </Routes>
       </Content>
 

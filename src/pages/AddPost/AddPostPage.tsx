@@ -23,7 +23,7 @@ const AddPostPage = () => {
       message.success('Post created successfully!');
       navigate(AppRoutes.main);
     } catch (e) {
-      console.log(`Something went wrong + ${e}`);
+      console.error(`Something went wrong + ${e}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -31,7 +31,7 @@ const AddPostPage = () => {
 
   return (
     <PostForm
-      titleText="Create New Post Entry"
+      titleText="Create New Post"
       submitButtonText="Publish post"
       isSubmitting={isSubmitting}
       onFinish={handleFinish}

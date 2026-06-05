@@ -29,8 +29,12 @@ export const blogApi = {
     const response = await firebaseAxios.get<IPost | null>(`/posts/${id}.json`);
     return response.data;
   },
+
   deletePost: async (id: string): Promise<void> => {
     await firebaseAxios.delete(`/posts/${id}.json`);
-  }
+  },
 
+  updatePost: async (id: string, post: IPost): Promise<void> => {
+    await firebaseAxios.put(`/posts/${id}.json`, post);
+  },
 };

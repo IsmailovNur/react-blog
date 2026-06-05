@@ -1,11 +1,11 @@
 import { Typography } from 'antd';
 
 import Posts from "../../widgets/Posts/Posts.tsx";
-import "./Home.css";
+import "./HomePage.css";
 
 const {Title} = Typography;
 
-const Home = () => {
+const HomePage = () => {
 
   return (
     <div>
@@ -15,4 +15,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

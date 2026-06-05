@@ -1,10 +1,10 @@
-import "./Contacts.css";
+import "./ContactsPage.css";
 import { Typography } from 'antd';
 import { GithubOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
 
 const {Title, Text} = Typography;
 
-const Contacts = () => {
+const ContactsPage = () => {
   return (
 
     <>
@@ -41,4 +41,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactsPage;

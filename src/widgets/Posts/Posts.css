@@ -3,3 +3,9 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.create-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

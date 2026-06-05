@@ -1,9 +1,9 @@
 import { Card, List, Typography } from 'antd';
-import "./About.css";
+import "./AboutPage.css";
 import { InfoCircleTwoTone } from "@ant-design/icons";
 
 const {Title, Paragraph} = Typography;
-const About = () => {
+const AboutPage = () => {
   return (
     <Card className="about-content">
       <div className="about-user">
@@ -40,4 +40,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
 import { blogApi } from "../../shared/api/api.ts";
 import Loader from "../../shared/Loader/Loader.tsx";
-import { Empty } from "antd";
+import { Button, Empty } from "antd";
 import PostCard from "../PostCard/PostCard.tsx";
 import type { IPostWithId } from "../../shared/types/blog.ts";
 
 import "./Posts.css";
+import { useNavigate } from "react-router-dom";
+import { AppRoutes } from "../../shared/routing/routes.ts";
 
 const Posts = () => {
   const [posts, setPosts] = useState<IPostWithId[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const navigate = useNavigate();
 
   const fetchPosts = async () => {
     try {
@@ -31,8 +35,13 @@ const Posts = () => {
       <Loader isLoading={isLoading} />
 
       {!isLoading && posts.length === 0 && (
-        <Empty description={
-          <span>No posts found. Create the post at first </span>} />
+        <div>
+          <Empty description={
+            <span>No posts found. Create the post at first </span>} />
+          <div className="create-post">
+            <Button size="large" type="link" onClick={() => navigate(AppRoutes.addPost)}>Create First Post</Button>
+          </div>
+        </div>
       )}
 
       {!isLoading && posts.map((post) => (
