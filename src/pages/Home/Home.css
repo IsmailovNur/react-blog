@@ -1,0 +1,15 @@
+.home-content {
+  background: #1f1f1f;
+  border-color: #303030;
+}
+
+.user-icon {
+  font-size: 48px;
+  color: #fff;
+}
+
+.home-user {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

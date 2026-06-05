@@ -1,0 +1,27 @@
+.contacts-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.contacts-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.contacts-item-icon {
+  font-size: 30px;
+  color: #177ddc;
+}

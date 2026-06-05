@@ -1,0 +1,25 @@
+.about-content {
+  background: #1f1f1f;
+  border-color: #303030;
+}
+
+.info-icon {
+  font-size: 40px;
+}
+
+.about-user {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info-list-header {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+
+.info-list-item {
+  color: #fff !important;
+}
+
