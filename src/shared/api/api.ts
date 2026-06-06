@@ -18,7 +18,9 @@ export const blogApi = {
     return Object.keys(data).map((key) => ({
       id: key,
       ...data[key],
-    }));
+    })).sort((a, b) =>
+      new Date(b.datetime).getTime() - new Date(a.datetime).getTime()
+    );
   },
 
   createPost: async (post: IPost): Promise<void> => {
